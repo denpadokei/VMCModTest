@@ -5,17 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VMCModTest.Setting"
         xmlns:vm="clr-namespace:VMCModTest.Setting.ViewModels"
+        xmlns:view="clr-namespace:VMCModTest.Setting.Views"
         mc:Ignorable="d"
         Title="{Binding Title}" Height="450" Width="800">
     <Window.DataContext>
         <vm:MainWindowViewModel />
     </Window.DataContext>
     <Grid>
-        <StackPanel>
-            <DockPanel HorizontalAlignment="Left">
-                <TextBox Text="{Binding FilePath}" Width="300"></TextBox>
-                <Button Content="…" Command="{Binding OpenFileDialogCommand}" Width="40"></Button>
-            </DockPanel>
-        </StackPanel>
+        <ContentControl>
+            <view:MainControll />
+        </ContentControl>
     </Grid>
 </Window>

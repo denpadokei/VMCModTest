@@ -40,7 +40,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
-namespace VMCModTest.Setting.SimpleJSON
+namespace VMCModTest.Core.SimpleJSON
 {
     public enum JSONNodeType
     {

@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VMCModTest", "VMCModTest\VMCModTest.csproj", "{E25D80F5-5CF9-4C6D-9FA9-118EC942125F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VMCModTest.Setting", "VMCModTest.Setting\VMCModTest.Setting.csproj", "{18979DD4-07FB-4CEC-8E0E-19804EB2BBFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VMCModTest.Setting", "VMCModTest.Setting\VMCModTest.Setting.csproj", "{18979DD4-07FB-4CEC-8E0E-19804EB2BBFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VMCModTest.Core", "VMCModTest.Core\VMCModTest.Core.csproj", "{A07661DD-5F27-425A-8769-103F4480CC8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{18979DD4-07FB-4CEC-8E0E-19804EB2BBFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18979DD4-07FB-4CEC-8E0E-19804EB2BBFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18979DD4-07FB-4CEC-8E0E-19804EB2BBFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07661DD-5F27-425A-8769-103F4480CC8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07661DD-5F27-425A-8769-103F4480CC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07661DD-5F27-425A-8769-103F4480CC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07661DD-5F27-425A-8769-103F4480CC8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

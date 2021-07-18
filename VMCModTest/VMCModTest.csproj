@@ -4,12 +4,8 @@
     <VMCDirPath>C:\Stream\VirtualMotionCapture0.50b11\</VMCDirPath>
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Settings\Web\index.html" />
-    <None Remove="Settings\Web\js\setting.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Settings\Web\index.html" />
-    <EmbeddedResource Include="Settings\Web\js\setting.js" />
+    <ProjectReference Include="..\VMCModTest.Core\VMCModTest.Core.csproj" />
+    <ProjectReference Include="..\VMCModTest.Setting\VMCModTest.Setting.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -394,9 +390,10 @@
       <Private>false</Private>
     </Reference>
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  <Target Name="PostBuild" AfterTargets="Build">
     <PropertyGroup>
       <ModAssemblyName>$(SolutionName).dll</ModAssemblyName>
+      <CoreAssemblyName>$(SolutionName).Core.dll</CoreAssemblyName>
       <SettingAssemblyDir>$(SolutionDir)$(SolutionName).Setting\bin\$(Configuration)\$(TargetFramework)\</SettingAssemblyDir>
       <SettingAssemblyName>$(SettingAssemblyDir)$(SolutionName).Setting.exe</SettingAssemblyName>
       <SettingConfigName>$(SettingAssemblyDir)$(SolutionName).Setting.exe.config</SettingConfigName>
@@ -404,6 +401,7 @@
     </PropertyGroup>
     <MakeDir Directories="$(ModPath)"></MakeDir>
     <Copy SourceFiles="$(OutDir)$(ModAssemblyName)" DestinationFolder="$(ModPath)"></Copy>
+    <Copy SourceFiles="$(OutDir)$(CoreAssemblyName)" DestinationFolder="$(ModPath)"></Copy>
     <Copy SourceFiles="$(SettingAssemblyName)" DestinationFolder="$(ModPath)"></Copy>
     <Copy SourceFiles="$(SettingConfigName)" DestinationFolder="$(ModPath)"></Copy>
     <Copy SourceFiles="$(SettingAssemblyDir)Prism.dll" DestinationFolder="$(ModPath)"></Copy>

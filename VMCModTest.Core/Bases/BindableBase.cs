@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VMCModTest.Bases
+namespace VMCModTest.Core.Bases
 {
     public abstract class BindableBase : INotifyPropertyChanged
     {

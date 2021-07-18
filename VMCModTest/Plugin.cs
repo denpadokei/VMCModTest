@@ -2,10 +2,9 @@ using System;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using UnityEngine;
 using VMCMod;
-using VMCModTest.Settings;
+using VMCModTest.Core.Setting;
 using Debug = UnityEngine.Debug;
 
 namespace VMCModTest
@@ -14,18 +13,17 @@ namespace VMCModTest
     public class Plugin : MonoBehaviour
     {
         public static readonly string SettingExePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "VMCModTest.Setting.exe");
-        private WebServiceController _service;
 
         #region // Unity methods
         private void Awake()
         {
             // 生成時最初に呼び出されます。
-            this._service = new WebServiceController();
+            GrobalSetting.Instance.OnConfigChanged += this.OnConfigChanged;
         }
 
         private void Start()
         {
-            this._service?.Start();
+            
         }
 
         private void Update()
@@ -37,10 +35,17 @@ namespace VMCModTest
 
         private void OnDestroy()
         {
-            this._service?.Stop();
+            GrobalSetting.Instance.OnConfigChanged -= this.OnConfigChanged;
         }
         #endregion
 
+        /// <summary>
+        /// 設定ファイルが変わったときに呼び出されます。
+        /// </summary>
+        private void OnConfigChanged()
+        {
+
+        }
         /// <summary>
         /// VMC上でSettingボタンを押したときに実行されるメソッドです。<br>
         /// publicにしておかないと呼び出されないので注意してください。
@@ -49,8 +54,7 @@ namespace VMCModTest
         public void OnSetting()
         {
             Debug.Log(SettingExePath);
-            //Process.Start(SettingExePath);
-            this._service?.Launch();
+            Process.Start(SettingExePath);
         }
     }
 }
