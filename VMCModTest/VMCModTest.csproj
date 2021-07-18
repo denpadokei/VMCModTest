@@ -1,0 +1,411 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <VMCDirPath>C:\Stream\VirtualMotionCapture0.50b11\</VMCDirPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Settings\Web\index.html" />
+    <None Remove="Settings\Web\js\setting.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Settings\Web\index.html" />
+    <EmbeddedResource Include="Settings\Web\js\setting.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.multiplayer-hlapi.Runtime">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlWindow">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\ControlWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="DepthFirstScheduler">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\DepthFirstScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="DVRAuth-UnityDll">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\DVRAuth-UnityDll.dll</HintPath>
+    </Reference>
+    <Reference Include="DVRAvatar">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\DVRAvatar.dll</HintPath>
+    </Reference>
+    <Reference Include="DVRAvatarCalibrator">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\DVRAvatarCalibrator.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshUtility">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\MeshUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Mono.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="MToon">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\MToon.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Novell.Directory.Ldap">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Novell.Directory.Ldap.dll</HintPath>
+    </Reference>
+    <Reference Include="ShaderProperty.Runtime">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\ShaderProperty.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamVR">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\SteamVR.dll</HintPath>
+    </Reference>
+    <Reference Include="UniHumanoid">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UniHumanoid.dll</HintPath>
+    </Reference>
+    <Reference Include="UniJSON">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UniJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Unity.Analytics.DataPrivacy.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization">
+      <Private>false</Private>
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.Monetization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.Purchasing.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.SpatialTracking.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UNETModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityMemoryMappedFile">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UnityMemoryMappedFile.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UniUnlit">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\UniUnlit.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Valve.Newtonsoft.Json">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\Valve.Newtonsoft.Json.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VMCMod">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\VMCMod.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VRM">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\VRM.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VRoidSDK">
+      <HintPath>$(VMCDirPath)VirtualMotionCapture_Data\Managed\VRoidSDK.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <PropertyGroup>
+      <ModAssemblyName>$(SolutionName).dll</ModAssemblyName>
+      <SettingAssemblyDir>$(SolutionDir)$(SolutionName).Setting\bin\$(Configuration)\$(TargetFramework)\</SettingAssemblyDir>
+      <SettingAssemblyName>$(SettingAssemblyDir)$(SolutionName).Setting.exe</SettingAssemblyName>
+      <SettingConfigName>$(SettingAssemblyDir)$(SolutionName).Setting.exe.config</SettingConfigName>
+      <ModPath>$(VMCDirPath)Mods/$(SolutionName)</ModPath>
+    </PropertyGroup>
+    <MakeDir Directories="$(ModPath)"></MakeDir>
+    <Copy SourceFiles="$(OutDir)$(ModAssemblyName)" DestinationFolder="$(ModPath)"></Copy>
+    <Copy SourceFiles="$(SettingAssemblyName)" DestinationFolder="$(ModPath)"></Copy>
+    <Copy SourceFiles="$(SettingConfigName)" DestinationFolder="$(ModPath)"></Copy>
+    <Copy SourceFiles="$(SettingAssemblyDir)Prism.dll" DestinationFolder="$(ModPath)"></Copy>
+  </Target>
+</Project>
