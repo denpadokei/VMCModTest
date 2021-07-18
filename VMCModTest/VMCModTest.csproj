@@ -3,14 +3,6 @@
     <TargetFramework>net472</TargetFramework>
     <VMCDirPath>C:\Stream\VirtualMotionCapture0.50b11\</VMCDirPath>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Settings\Web\index.html" />
-    <None Remove="Settings\Web\js\setting.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Settings\Web\index.html" />
-    <EmbeddedResource Include="Settings\Web\js\setting.js" />
-  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
@@ -397,15 +389,9 @@
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <PropertyGroup>
       <ModAssemblyName>$(SolutionName).dll</ModAssemblyName>
-      <SettingAssemblyDir>$(SolutionDir)$(SolutionName).Setting\bin\$(Configuration)\$(TargetFramework)\</SettingAssemblyDir>
-      <SettingAssemblyName>$(SettingAssemblyDir)$(SolutionName).Setting.exe</SettingAssemblyName>
-      <SettingConfigName>$(SettingAssemblyDir)$(SolutionName).Setting.exe.config</SettingConfigName>
       <ModPath>$(VMCDirPath)Mods/$(SolutionName)</ModPath>
     </PropertyGroup>
     <MakeDir Directories="$(ModPath)"></MakeDir>
     <Copy SourceFiles="$(OutDir)$(ModAssemblyName)" DestinationFolder="$(ModPath)"></Copy>
-    <Copy SourceFiles="$(SettingAssemblyName)" DestinationFolder="$(ModPath)"></Copy>
-    <Copy SourceFiles="$(SettingConfigName)" DestinationFolder="$(ModPath)"></Copy>
-    <Copy SourceFiles="$(SettingAssemblyDir)Prism.dll" DestinationFolder="$(ModPath)"></Copy>
   </Target>
 </Project>
